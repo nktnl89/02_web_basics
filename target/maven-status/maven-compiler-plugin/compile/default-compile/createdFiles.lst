@@ -1,0 +1,13 @@
+servlet\LogoutServlet.class
+repository\ProductRepository.class
+repository\BasketRepository.class
+repository\BasketRepositoryInterface.class
+repository\ProductRepositoryInterface.class
+entity\Basket.class
+servlet\LoginServlet.class
+entity\User.class
+servlet\CharsetFilter.class
+entity\Product.class
+repository\UserRepositoryInterface.class
+repository\UserRepository.class
+servlet\ProductsServlet.class
