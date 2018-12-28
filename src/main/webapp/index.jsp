@@ -8,18 +8,23 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/product.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/search.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/basket.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/category.css" />
 </head>
-<body><!--onload="createProducts()"-->
+<body>
     <div class="container">
         <div class="header">
             <div class="login">
-                <jsp:useBean id="currentUser" class="entity.User" scope="session"/>
+                <%-- <jsp:useBean id="currentUser" class="entity.User" scope="session"/> --%>
+                <%-- <c:set var="currentUser" scope="session" value="${currentUser}" /> --%>
                 <c:out value="Привет, ${currentUser.getLogin()}"><a href="/jsp/authorization.jsp">Вход</a></c:out>
                 <a href="/logout">Выход</a>
             </div>
             <div class="placeForBanner">мемасики для важных переговоров</div>
-            <div class="search" onclick="popupClick(this)">Поиск</div>
-            <div class="basket" onclick="popupClick(this)">
+            <div class="search">Поиск</div>
+            <div class="basket">
                 <div class="basketRef">Корзина</div>
                 <div class="basketPreview">0</div>
             </div>
@@ -28,29 +33,30 @@
             <div class="category" id="category1">
                 <div class="categoryName">категория1</div>
                 <c:forEach var="product" items="${products}">
-                    <div class="product" onclick="replyClick(this)" id="${product.getId()}">
-                        <div class="productPicture"><img src=<c:out value="${product.getImg()}"/> /></div>
-                        <div class="productText"><c:out value="${product.getText()}" /></div>
-                        <div class="productPrice"><c:out value="${product.getPrice()}" /></div>
-                        <div class="addProductToOrder" onclick="addProductToOrder(this)">В корзину</div>
-                        <div class="deleteFromOrder" onclick="deleteFromOrder(this)">[X]</div>
+                    <div class="product" id="${product.getId()}">
+                        <div class="productPicture"><img src="${product.getImg()}"/></div>
+                        <div class="productText">"${product.getText()}"</div>
+                        <div class="productPrice">"${product.getPrice()}"</div>
+                        <div class="addProductToOrder">В корзину</div>
+                        <div class="deleteFromOrder">[X]</div>
                     </div>
                 </c:forEach>
             </div>
-            <!--<div class="category" id="category2">
+            <!-- <div class="category" id="category2">
                 <div class="categoryName">категория2</div>
-            </div>-->
+            </div> -->
         </div>
+        <div class="footer">тут футер</div>
     </div>
     <div class="popupSearch">
         <div class="popupSearchContent">
             <div class="searchHeader">
                 <div class="headline">Поиск:</div>
-                <div class="closeButton" onclick="searchClose()">[X]</div>
+                <div class="closeButton">[X]</div>
             </div>
             <form action="#">
                 <input type="text" name="search" id="text-to-find" placeholder="Наименование товара...">
-                <input type="button" value="Найти" onclick="findProductByName(this.form)">
+                <input type="button" value="Найти">
             </form>
             <div class="foundedProducts"></div>
         </div>
@@ -59,13 +65,13 @@
         <div class="popupBasketContent">
             <div class="basketHeader">
                 <div class="headline">Корзина:</div>
-                <div class="closeButton" onclick="basketClose()">[X]</div>
+                <div class="closeButton">[X]</div>
             </div>
-            <div class="busketProducts"></div>
+            <div class="basketProducts"></div>
             <div class="basketSum">
                 <div>Сумма товаров</div>
                 <div class="productSum"></div>
-                <div class="issueButton" onclick="basketClose()">Оформить</div>
+                <div class="issueButton">Оформить</div>
                 <div>Скидка 10%</div>
                 <div class="discountSum"></div>
                 <div>Итого</div>
@@ -73,7 +79,11 @@
             </div>
         </div>
     </div>
-    <div class="footer">тут футер</div>
+
     <script src="js/main.js"></script>
+    <script src="js/product.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/basket.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
 </body>
 </html>

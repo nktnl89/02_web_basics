@@ -8,6 +8,7 @@ D:\java\02_web_basics\src\main\java\entity\Basket.java
 D:\java\02_web_basics\src\main\java\servlet\ProductsServlet.java
 D:\java\02_web_basics\src\main\java\repository\ProductRepositoryInterface.java
 D:\java\02_web_basics\src\main\java\servlet\CharsetFilter.java
+D:\java\02_web_basics\src\main\java\entity\Category.java
 D:\java\02_web_basics\src\main\java\repository\BasketRepositoryInterface.java
 D:\java\02_web_basics\src\main\java\servlet\LoginServlet.java
 D:\java\02_web_basics\src\main\java\servlet\LogoutServlet.java

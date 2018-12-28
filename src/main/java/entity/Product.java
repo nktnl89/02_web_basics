@@ -2,6 +2,18 @@ package entity;
 
 public class Product {
     private int id;
+    private String img;
+    private String text;
+    private int price;
+    private Category category;
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
 
     public int getId() {
         return id;
@@ -10,10 +22,6 @@ public class Product {
     public void setId(int id) {
         this.id = id;
     }
-
-    private String img;
-    private String text;
-    private int price;
 
     public String getImg() {
         return img;

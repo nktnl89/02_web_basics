@@ -5,6 +5,7 @@ repository\BasketRepositoryInterface.class
 repository\ProductRepositoryInterface.class
 entity\Basket.class
 servlet\LoginServlet.class
+entity\Category.class
 entity\User.class
 servlet\CharsetFilter.class
 entity\Product.class
