@@ -46,8 +46,8 @@
                 <div class="categoryName">категория2</div>
             </div> -->
         </div>
-        <div class="footer">тут футер</div>
     </div>
+    <div class="footer">тут футер</div>
     <div class="popupSearch">
         <div class="popupSearchContent">
             <div class="searchHeader">

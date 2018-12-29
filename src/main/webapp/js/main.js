@@ -1,4 +1,4 @@
-//let productArrayCategory = [];
+let productArrayCategory = [];
 //productArrayCategory[0] = new Product(0, "../3/img/Computer-Guy.png", "Computer-guy", Math.floor(Math.random() * 100));
 //productArrayCategory[1] = new Product(1, "../3/img/1317567954.png", "I know what you did", Math.floor(Math.random() * 100));
 //productArrayCategory[2] = new Product(2, "../3/img/1317604469.png", "Why???", Math.floor(Math.random() * 100));

@@ -61,3 +61,11 @@
     cursor: pointer;
     font-weight: bold;
 }
+.basket {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+.basket div {
+    padding-right: 5px;
+}

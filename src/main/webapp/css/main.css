@@ -59,11 +59,3 @@ body {
 .placeForBanner {
     flex-grow: 3;
 }
-.basket {
-    display: flex;
-    flex-direction: row;
-    flex-grow: 1;
-}
-.basket div {
-    padding-right: 5px;
-}
